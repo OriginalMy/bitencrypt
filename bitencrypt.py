@@ -44,15 +44,15 @@ from pycoin.key.Key import Key
 from pycoin import encoding
 from pycoin.ecdsa import secp256k1
 
-
-SEC_RE = re.compile(r"^(0[23][0-9a-fA-F]{64})|(04[0-9a-fA-F]{128})$")
-
 message = "Encrypt/Decrypt this text using Bitcoin Public Private key pair"
 secret = "L5Se36mXekGsMDCxLausHsfaFn1KRaRV7hrJNuYmoyEJ4M5GxfLV"
 
 ##
 # Test and define what kind of secret exponent was provided
 ##
+
+SEC_RE = re.compile(r"^(0[23][0-9a-fA-F]{64})|(04[0-9a-fA-F]{128})$")
+
 def parse_as_number(s):
     try:
         return int(s)
